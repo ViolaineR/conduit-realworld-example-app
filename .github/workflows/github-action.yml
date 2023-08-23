@@ -17,6 +17,6 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: install dependencies
-        run: npm install
+        run: npm install && npm install -w frontend && npm install -w backend
       - name: Build projects
         run: npm run start
